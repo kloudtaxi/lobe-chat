@@ -2,7 +2,7 @@
 
 
 
-> This is a fork of [ix](https://github.com/kreneskyp/ix.git) for integration with Sovera Platform. Anything in this branch should be considered as `out-off-tree` from the `ix origin`. 
+> This is a fork of [Lobe Chat](https://github.com/lobehub/lobe-chat.git) for integration with Sovera Platform. Anything in this branch should be considered as `out-off-tree` from the `lobe-chat origin`. 
 
 > :pray:  As always please don't leave any **API KEYs, Tokens, Credentials** or other sensitive information in this file. 
 
@@ -19,7 +19,7 @@
 2. Set SSL auth to PK only
 3. SSH into VM 
       ```zsh
-      ssh root@134.209.165.15
+      ssh into the vm
       ```
 4. Update OS and utilities 
    ```bash
@@ -74,22 +74,29 @@
    git clone https://github.com/kloudtaxi/lobe-chat.git
    ```
 
-2. Run docker compose file from sovera folder
+2. Check out `sovera-lobe-chat` branch
+
+   ```
+   ```
+
+   
+
+3. Run docker compose file from sovera folder
 
    ```sh
    cd ~/sovera/lobe-chat/sovera
    docker compose up -d
    ```
 
-3. Verify everything is working 
+4. Verify everything is working 
 
    ```sh
    docker compose logs -f
    ```
 
-4. In dev or demo environment create a `.env` file in `lobe-chat\sovera` folder with `ACCESS_CODE=xxxxxxxxx`. Users will need this code to use the chatbot. 
+5. In dev or demo environment create a `.env` file in `lobe-chat\sovera` folder with `ACCESS_CODE=xxxxxxxxx`. Users will need this code to use the chatbot. 
 
-5. Update settings in either UI or configuration file to proxy OpenAI api calls via `llama-gateway` 
+6. Update settings in either UI or configuration file to proxy OpenAI api calls via `llama-gateway` 
 
    Snippet of configuration file :heavy_exclamation_mark: line 3 & 9
 
